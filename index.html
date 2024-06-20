@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 100%;
+        height: 95vh;
+        overflow: hidden;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+    "autoLoad": true,
+    "hfov": 80.0,
+    "haov": 252.18,
+    "vaov": 56.71,
+    "vOffset": 1.0,
+    "backgroundColor": [0.15, 0.15, 0.15],
+    "type": "multires",
+    "title": "Valley of Fire",
+    "author": "Frank Jiang",
+    "multiRes": {
+        "basePath": "./img",
+        "path": "/%l/%s%y_%x",
+        "fallbackPath": "/fallback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 6,
+        "cubeResolution": 15488
+    }
+});
+</script>
+
+</body>
+
+</html>
